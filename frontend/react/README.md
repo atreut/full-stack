@@ -1,13 +1,14 @@
-# 🟣 Full-Stack Ecosystem - Next.js Frontend
+# ⚛️ Full-Stack Ecosystem - React Frontend
 
-Aplicação cliente desenvolvida em **Next.js 14+** utilizando o **App Router**, integrada ao monorepo do ecossistema full-stack. Este front-end aproveita renderização híbrida (SSR/SSG), rotas baseadas em diretórios, otimização automática de recursos e estilização moderna.
+Aplicação cliente desenvolvida em **React 18+** utilizando **Vite** como empacotador de alta performance, integrada ao monorepo do ecossistema full-stack. Este front-end foca em uma experiência de Single Page Application (SPA) fluida, componentes modulares, hooks customizados e estilização moderna.
 
 
 ## 🛠️ Tecnologias e Dependências Utilizadas
 
-* **Framework Principal**: Next.js (App Router)
-* **Biblioteca UI**: React 18+
+* **Biblioteca Principal**: React 18+
+* **Build Tool / Bundler**: Vite
 * **Linguagem**: TypeScript
+* **Roteamento**: React Router
 * **Estilização**: Tailwind CSS
 * **Gerenciador de Pacotes**: npm
 
@@ -15,16 +16,19 @@ Aplicação cliente desenvolvida em **Next.js 14+** utilizando o **App Router**,
 ## 📂 Estrutura de Diretórios da Aplicação
 
 ```text
-/frontend/next
-├── app/                      # App Router: páginas, layouts e rotas da aplicação
-│   ├── favicon.ico           # Ícone do site
-│   ├── globals.css           # Estilos globais (Tailwind CSS)
-│   ├── layout.tsx            # Layout raiz compartilhado entre as páginas
-│   └── page.tsx              # Página inicial (index)
-├── public/                   # Arquivos estáticos públicos (imagens, fontes)
-├── next.config.ts            # Configurações do Next.js
+/frontend/react
+├── src/
+│   ├── assets/               # Recursos estáticos (imagens, ícones)
+│   ├── components/           # Componentes reutilizáveis da interface
+│   ├── hooks/                # Custom hooks para lógica compartilhada
+│   ├── services/             # Configuração de clientes HTTP (ex: Axios / Fetch para a API)
+│   ├── App.tsx               # Componente raiz da aplicação
+│   ├── main.tsx              # Ponto de entrada do React no DOM
+│   └── index.css             # Estilos globais (Tailwind CSS)
+├── index.html                # Template HTML principal
 ├── package.json              # Dependências e scripts do projeto Node.js
-└── tsconfig.json             # Configurações do TypeScript
+├── tsconfig.json             # Configurações do TypeScript
+└── vite.config.ts            # Configurações do empacotador Vite
 
 ```
 
@@ -39,9 +43,9 @@ Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
 
 ## 🚀 Como Executar o Projeto em Desenvolvimento
 
-1. **Abra o terminal** e navegue até a pasta da aplicação Next.js a partir da raiz do monorepo:
+1. **Abra o terminal** e navegue até a pasta da aplicação React a partir da raiz do monorepo:
 ```bash
-cd frontend/next
+cd frontend/react
 
 ```
 
@@ -61,26 +65,26 @@ npm run dev
 
 
 4. A aplicação estará ativa e acessível no navegador em:
-👉 **`http://localhost:3000`**
+👉 **`http://localhost:5173`** *(ou a porta indicada no terminal pelo Vite)*
 
 
 ## 🌐 Integração com o Back-end
 
-A aplicação consome a API RESTful em Spring Boot. Certifique-se de que a API está rodando na porta correta (`http://localhost:8081`) e configure as variáveis de ambiente necessárias (como a URL base da API) caso utilize requisições do lado do servidor ou cliente.
+A aplicação consome a API RESTful do Spring Boot. Certifique-se de que a API está rodando na porta correta (`http://localhost:8081`) e configure as variáveis de ambiente ou o cliente de requisições para apontar para o back-end.
 
 
 ## 📦 Build para Produção
 
-Para gerar a versão otimizada de produção da aplicação Next.js:
+Para compilar e gerar os arquivos estáticos otimizados para produção (geralmente gerados na pasta `dist/`):
 
 ```bash
 npm run build
 
 ```
 
-Para iniciar o servidor de produção localmente após o build:
+Para visualizar o build de produção localmente antes do deploy:
 
 ```bash
-npm run start
+npm run preview
 
 ```
