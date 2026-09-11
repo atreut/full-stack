@@ -17,8 +17,6 @@ Repositório centralizado em arquitetura de monorepo estruturado para integrar u
   * **React**: React 18+, Vite, TypeScript, Tailwind CSS, React Router
   * **Next.js**: Next.js (App Router), React, TypeScript, Tailwind CSS
 
----
-
 ## 📂 Estrutura de Diretórios do Monorepo
 
 ```text
@@ -49,7 +47,7 @@ Repositório centralizado em arquitetura de monorepo estruturado para integrar u
 │
 └── docker-compose.yml        # Orquestrador geral do ecossistema
 
----
+```
 
 ## 🚀 Como Executar o Projeto
 
@@ -111,7 +109,3 @@ npm run dev
 
 
 *(Disponível em `http://localhost:3000`)*
-
-```
-
-```
