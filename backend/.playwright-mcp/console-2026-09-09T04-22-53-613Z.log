@@ -1,8 +1,0 @@
-[    1982ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=27bf8792:21550
-[   42050ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=27bf8792:21550
-[   42127ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:8080/realms/corporate-realm/protocol/openid-connect/token:0
-[   42129ms] [ERROR] Falha ao inicializar o Keycloak: undefined @ http://localhost:5173/src/main.tsx:26
-[  153129ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=27bf8792:21550
-[  153990ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=27bf8792:21550
-[  154121ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:8080/realms/corporate-realm/protocol/openid-connect/token:0
-[  154124ms] [ERROR] Falha ao inicializar o Keycloak: undefined @ http://localhost:5173/src/main.tsx?t=1788927925781:26
