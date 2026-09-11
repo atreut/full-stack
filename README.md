@@ -1,4 +1,3 @@
-```markdown
 # Full-Stack Multi-Frontend Ecosystem
 
 Repositório centralizado em arquitetura de monorepo estruturado para integrar um back-end corporativo de alta performance com um ecossistema multiplataforma de front-ends modernos.
@@ -49,8 +48,6 @@ Repositório centralizado em arquitetura de monorepo estruturado para integrar u
 │       └── package.json      # Dependências Node.js do Vue
 │
 └── docker-compose.yml        # Orquestrador geral do ecossistema
-
-```
 
 ---
 
