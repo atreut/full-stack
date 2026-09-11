@@ -1,59 +1,98 @@
-# Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
 
-## Development server
+# 🅰️ Full-Stack Ecosystem - Angular Frontend
 
-To start a local development server, run:
+Aplicação cliente desenvolvida em **Angular** (versão atualizada), integrada à arquitetura de monorepo do ecossistema full-stack. Este front-end consome a API RESTful em Spring Boot e utiliza componentes modernos para gerenciamento de rotas, reatividade com RxJS e estilização utilitária.
 
-```bash
-ng serve
+
+## 🛠️ Tecnologias e Dependências Utilizadas
+
+* **Framework Principal**: Angular (Angular CLI)
+* **Linguagem**: TypeScript
+* **Gerenciamento de Estado & Reatividade**: RxJS
+* **Estilização**: Tailwind CSS / CSS Modular
+* **Gerenciador de Pacotes**: npm
+
+
+## 📂 Estrutura de Diretórios da Aplicação
+
+```text
+/frontend/angular
+├── src/
+│   ├── app/                  # Componentes principais, rotas e serviços
+│   │   ├── components/       # Componentes reutilizáveis da interface
+│   │   ├── services/         # Serviços de integração HTTP (ex: order.service.ts)
+│   │   ├── app.component.ts  # Componente raiz
+│   │   ├── app.routes.ts     # Configuração de rotas da aplicação
+│   │   └── app.config.ts     # Configurações globais e provedores (DI)
+│   ├── assets/               # Imagens, ícones e arquivos estáticos
+│   ├── environments/         # Variáveis de ambiente (desenvolvimento/produção)
+│   ├── index.html            # Página HTML principal
+│   ├── main.ts               # Ponto de entrada da aplicação TypeScript
+│   └── styles.css            # Folha de estilos global (Tailwind)
+├── angular.json              # Configurações do Angular CLI para build e serve
+├── package.json              # Dependências e scripts do projeto Node.js
+└── tsconfig.json             # Configurações do compilador TypeScript
+
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## ⚙️ Pré-requisitos
 
-## Code scaffolding
+Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+* **Node.js** (versão LTS recomendada, ex: v18+ ou v20+)
+* **npm** (geralmente instalado junto com o Node.js)
+* **Angular CLI** (opcional, mas recomendado globalmente: `npm install -g @angular/cli`)
 
+
+## 🚀 Como Executar o Projeto em Desenvolvimento
+
+1. **Abra o terminal** e navegue até a pasta da aplicação Angular a partir da raiz do monorepo:
 ```bash
-ng generate component component-name
+cd frontend/angular
+
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
+2. **Instale as dependências** do projeto:
 ```bash
-ng generate --help
+npm install
+
 ```
 
-## Building
 
-To build the project run:
-
+3. **Inicie o servidor de desenvolvimento**:
 ```bash
-ng build
+npm start
+
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+*(Ou utilize diretamente: `ng serve`)*
+4. A aplicação estará ativa e acessível no navegador em:
+👉 **`http://localhost:4200`**
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
 
-```bash
-ng test
+## 🌐 Configuração de Conexão com o Back-end
+
+Por padrão, a aplicação espera que a API do Spring Boot esteja rodando localmente. Verifique e ajuste a URL base da API nos arquivos de ambiente localizados em `src/environments/`:
+
+* `environment.ts` (Desenvolvimento):
+```typescript
+export const environment = {
+  production: false,
+  apiUrl: 'http://localhost:8081'
+};
+
 ```
 
-## Running end-to-end tests
+## 📦 Build para Produção
 
-For end-to-end (e2e) testing, run:
+Para gerar os arquivos otimizados e minificados prontos para deploy (geralmente gerados na pasta `dist/`):
 
 ```bash
-ng e2e
+npm run build
+
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+*(Ou utilize o comando de produção do CLI: `ng build --configuration production`)*
